@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab-1-4</title>
+</head>
+<body>
+<script type="text/javascript">
+	n = parseInt(prompt("Enter number of terms : "));
+	a=0;
+	b=1;
+	document.write("0,1,");
+	for(i=1;i<n-1;i++){
+		c = a+b;
+		a=b;
+		b=c;
+		document.write(c+",");
+	}
+</script>
+</body>
+</html>

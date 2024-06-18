@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab-1-5</title>
+</head>
+<body>
+<script type="text/javascript">
+	n = parseInt(prompt("Enter a number"));
+	rev=0;
+	temp=n;
+	while(n!=0){
+		rev = rev*10 + n%10;
+		n = parseInt(n/10);
+	}
+	if(temp == rev){
+		alert("Is Palindrome");
+	}
+	else{
+		alert("Is not Palindrome");
+	}
+</script>
+</body>
+</html>
