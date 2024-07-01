@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = [];
+         b = prompt("enter numbers : ");
+         c = b.split(",");
+         for(i=0;i<c.length;i++){
+            a[i]=parseInt(c[i]);
+         }
+        document.write("Your array : ",a,"<br>")
+        let temp = 0;
+        for(j=0;j<c.length;j++){
+            for(k=j+1;k<c.length;k++){
+                if(a[j]>a[k]){
+                    temp = a[j];
+                    a[j] = a[k];
+                    a[k] = temp;
+                }
+            }
+        }
+        document.write("ARRAY IN ASCENDING ORDER : ",a);
+    </script>
+</body>
+</html>

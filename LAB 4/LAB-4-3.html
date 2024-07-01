@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Student=[
+            {
+                "name" : "Arjun",
+                "Rno"  : 127,
+                "age"  : 20,
+                "ID"   : 1,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Darshan",
+                "Rno"  : 128,
+                "age"  : 20,
+                "ID"   : 2,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Rajkot",
+                "Rno"  : 129,
+                "age"  : 20,
+                "ID"   : 3,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Gujarat",
+                "Rno"  : 132,
+                "age"  : 19,
+                "ID"   : 5,
+                "Branch": "CSE",
+            }
+        ]
+        document.write("<table border=1>");
+        
+            document.write("<tr>");
+                document.write("<th> name </th>");
+                document.write("<th> Rno </th>");
+                document.write("<th> Age </th>");
+                document.write("<th> ID </th>");
+                document.write("<th> Branch </th>");
+                
+            document.write("</tr>");
+            for(i=0;i<Student.length;i++){
+            document.write("<tr>");
+                document.write("<td>",Student[i].name,"</td>");
+                document.write("<td>",Student[i].Rno,"</td>");
+                document.write("<td>",Student[i].age,"</td>");
+                document.write("<td>",Student[i].ID,"</td>");
+                document.write("<td>",Student[i].Branch,"</td>");
+                
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

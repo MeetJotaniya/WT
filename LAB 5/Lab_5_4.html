@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        .outer{
+            width: 50%;
+            height: 60%;
+        }
+        .h2{
+            height: 10%;
+            width: 100%;
+        }
+        .form{
+            height: 85%;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .name,.password{
+            height: 20%;
+            width: 100%;
+        }
+        .Age,.Enrollmentno.{
+            width: 50%;
+            height: 100%;
+        }
+        .flex{
+            display: flex;
+        }
+        .h5{
+            float: left;
+            width: 30%;
+            height: 90%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h2>Login Page</h2><br>
+        <div class="form">
+            <form>
+                <div class="name">
+                    <h5>Name : </h5>
+                    <input type="text" id="name" placeholder="Enter name">
+                </div><br>
+                <div class="password">
+                    <h5>Password : </h5>
+                    <input type="password" id="password" placeholder="Enter Password">
+                </div><br>
+                <div class="password">
+                    <h5>Password : </h5>
+                    <input type="password" id="password2" placeholder="Enter Repeat Password">
+                </div><br>
+                <div class="box flex">
+                <div class="Age">
+                    <h5>Age : </h5>
+                    <input type="number" id="age" placeholder="Enter Age">
+                </div>
+                <div class="Enrollmentno.">
+                    <h5>Enrollment number : </h5>
+                    <input type="text" id="enrollment" placeholder="Enter Enrollment number">
+                </div>
+                </div><br>
+                <div class="email">
+                    <h5>Email : </h5>
+                    <input type="email" id="email" placeholder="Enter Email">
+                </div><br>
+                <div class="button">
+                    <button value="Submit" id="Submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        
+        function submit(){
+            namebox = document.getElementById('name').value;
+        passbox = document.getElementById('password').value;
+        pass2box = document.getElementById('password2').value;
+        agebox = document.getElementById('age').value;
+        enrollbox = document.getElementById('enrollment').value;
+        emailbox = document.getElementById('email').value;
+        
+        pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}+$/;
+        p = new RegExp(pattern);
+        if(p.test(email)){
+        
+        }
+        }
+        document.addEventListener('submit', (event)=>{
+            event.preventDefault();
+            submit();
+        })
+        function ValidateEmail(emailbox) 
+        {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailbox.value))
+         {
+         return (true)
+        }
+         alert("You have entered an invalid email address!")
+        return (false)
+        } 
+    </script>
+</body>
+</html>

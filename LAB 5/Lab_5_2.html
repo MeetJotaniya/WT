@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab-5-2</title>
+</head>
+<body>
+	<form id="form" onsubmit="validForm()" style="text-align:center">
+		<h1 style="text-align: center;">Login Page</h1>
+		<div>
+			<label for="Username">Username : </label>
+			<input type="text" id="Username" placeholder="Enter Username" />
+		</div>
+			<div>
+				<label for="Password">Password : </label>
+				<input type="password" id="Password" placeholder="Enter Password" />
+			</div>
+			<div>
+				<input type="button" id="Submit" value="Login" />
+				<input type="button" id="Reset" value="Reset" onclick="res()">
+		</div>
+	</form>
+	<p id="errorMessage"></p>
+<script type="text/javascript">
+	errorMessage.style.color = "red";
+	function validForm(){
+	var user = document.getElementById('Username').value;
+	var pass = document.getElementById('Password').value;
+	var error = document.getElementById('errorMessage');
+	error = "";
+		if(user === ""){
+			error.innerHTML += "Please enter Username";
+			return false;
+		}
+		else if(user.length<8){
+			error.innerHTML += "Invalid Username";
+			return false;
+		}
+		pass_pattern = /^(?=.*\d)(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,12}$/;
+		if(pass === ""){
+			error.innerHTML += "Please enter Password";
+			return false;
+		}
+		else if((pass.length<8 || pass.length>12) && pass_pattern.test(pass)){
+			error.innerHTML += "Invalid Password";
+			return false;
+		}
+}
+function res(){
+		document.getElementById('Username').value = "";
+		document.getElementById('Password').value = "";
+	}
+</script>
+</body>
+</html>

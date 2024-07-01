@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game</title>
+</head>
+<body>
+	<p id="display"></p>
+	<button onclick="clicked()" id="btn">Click Me</button>
+<script type="text/javascript">
+	score=0;
+	let a = document.getElementById('display');
+	a.innerHTML = "Score = "+score;
+	function clicked(){
+		score++;
+		a.innerHTML = "Score = "+score;
+		changePos();
+	}
+	function changePos(){
+		let btn = document.getElementById('btn');
+		btn.style.position = "absolute";
+		let t = Math.random()*100+'%';
+		let l = Math.random()*100+'%';
+		btn.style.top = t;
+		btn.style.left = l;
+
+	}
+	setInterval(changePos,1000);
+</script>
+</body>
+</html>

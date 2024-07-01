@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        faculties=[
+            {
+                "name" : "Arjun",
+                
+                "age"  : 30,
+                "ID"   : 1,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Darshan",
+                
+                "age"  : 30,
+                "ID"   : 2,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Rajkot",
+                
+                "age"  : 30,
+                "ID"   : 3,
+                "Branch": "CSE",
+            },
+            {
+                "name" : "Gujarat",
+                
+                "age"  : 19,
+                "ID"   : 5,
+                "Branch": "CSE",
+            }
+        ]
+        document.write("<table border=1>");
+        
+            document.write("<tr>");
+                document.write("<th> name </th>");
+               
+                document.write("<th> Age </th>");
+                document.write("<th> ID </th>");
+                document.write("<th> Branch </th>");
+                
+            document.write("</tr>");
+            for(i=0;i<faculties.length;i++){
+            document.write("<tr>");
+                document.write("<td>",faculties[i].name,"</td>");
+               
+                document.write("<td>",faculties[i].age,"</td>");
+                document.write("<td>",faculties[i].ID,"</td>");
+                document.write("<td>",faculties[i].Branch,"</td>");
+                
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>
