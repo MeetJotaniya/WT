@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="change()">
+        Click Me
+    </button>
+    <script>
+        screen = document.querySelector('body');
+        function change(){
+            r = 1 + (255*Math.random());
+            g = 1 + (255*Math.random());
+            b = 1 + (255*Math.random());
+            screen.style.background = "rgb("+r+","+g+","+b+")";
+        }
+    </script>
+</body>
+</html>

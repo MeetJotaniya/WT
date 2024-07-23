@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function random(){
+            a = 4; //it has global scope
+            {
+            let b = 7; //it has block scope
+            }
+            {
+            var c = 8;//it has function scope
+            }
+            {
+            const d = 9;//it has block scope (it is constant)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            display: flex;
+            height: 99vh;
+            width: 99vw;
+        }
+        #mouse, #key{
+            height: 90%;
+            width: 45%;
+            border: 1px solid black;
+            margin-left: 3.5%;
+            margin-top: 3.5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #cbox, #kbox{
+            width: auto;
+            height: auto;
+            font-size: 200%;
+        }
+    </style>
+<body>
+    
+    <div id="mouse"><div id="cbox"></div></div>
+    <div id="key"><div style="margin-bottom: 30%;">KEY</div><div id="kbox"></div></div>
+    <script>
+       mousebox = document.getElementById("mouse");
+        keybox = document.getElementById("key");
+        cbox = document.getElementById("cbox");
+        kbox = document.getElementById("kbox");
+        
+        function display(str){
+            mousebox.innerHTML= str;
+        }
+        
+       mousebox.addEventListener('click', () => display('click'));
+       mousebox.addEventListener('dblclick', () => display('double click'));
+       mousebox.addEventListener('mouseout', () => display('mouseout'));
+       mousebox.addEventListener('mousemove', () => display('mousemove'));
+
+       document.addEventListener('keydown', (e) => {
+            kbox.innerHTML = e.key;
+       });
+    </script>
+    
+</body>
+</html>

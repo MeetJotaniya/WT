@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab-7-11</title>
+</head>
+<body>
+	<p id="rollNo"></p>
+<script type="text/javascript">
+	let n = prompt("Enter total number of students");
+	let start = parseInt(prompt("Enter starting roll No "));
+	let rollNo = document.getElementById('rollNo');
+	rollNo.innerHTML = "";
+
+	for (let i = 0; i < n; i++) {
+		let rollNumber = i + start;
+		rollNo.innerHTML += "<input type='checkbox' id='checkbox" + rollNumber + "' value='" + rollNumber + "' onclick='updateSelected()'/><label for='checkbox" + rollNumber + "'>" + rollNumber + "</label><br/>";
+	}
+
+	function updateSelected() {
+		let selected = [];
+		for (let i = 0; i < n; i++) {
+			let checkbox = document.getElementById('checkbox' + (i + start));
+			if (checkbox.checked) {
+				selected.push(checkbox.value);
+			}
+		}
+		let selectedText = "";
+		for (let i = 0; i < selected.length; i++) {
+			selectedText += selected[i];
+			if (i < selected.length - 1) {
+				selectedText += ", ";
+			}
+		}
+		console.log(selectedText);
+	}
+</script>
+</body>
+</html>

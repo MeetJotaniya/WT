@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab-6-5</title>
+</head>
+<body>
+	<p><input type="text" id="input"></p>
+	<button onclick="changeType()">Change to date/text</button>
+<script type="text/javascript">
+	function changeType(){
+		if(document.getElementById('input').type == 'text'){
+			document.getElementById('input').type = 'date';
+		}
+		else{
+			document.getElementById('input').type = 'text';
+		}
+	}
+</script>
+</body>
+</html>
